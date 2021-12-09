@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 960px;
+    background-image: url("greco.jpg");
+    background-size: 1920px 1100px;
+    background-color: rgb(8, 159, 230);
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content {
+    margin: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 50px;
+    width: 50%;
+    background-color: rgba(240, 248, 255, 0.602);
+}
+
+
+h1 {
+    color: rgb(8, 17, 66);
+}
+
+div {
+    color: rgb(22, 24, 36);
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+}
+
+button {
+    background-color: royalblue;
+    color: white;
+    font-weight: 700;
+    height: 70px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+button:hover {
+    background-color:rgb(46, 81, 187);
+}
+
+button:active {
+    background-color: rgb(245, 201, 3);
+}
