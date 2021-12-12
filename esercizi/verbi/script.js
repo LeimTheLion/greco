@@ -1,138 +1,164 @@
-const header = document.querySelector('header');
-header.onclick = () => {
-    window.open("../../index.html", "_self");
+let esercizi = document.querySelector('.esercizi');
+let inserisci = document.querySelector('.inserisci');
+let scrivi;
+let verbi = [];
+
+let domande = ["είμαι", "έχω", "αγαπώ", "μπορώ", "θέλω", "ξέρω", "ακούω", "λέω", "τρώω", "κλαίω", "καίω", "ζω", "υπάρχω", "φταίω", "διαβάζω", "γράφω"];
+function randomize() {
+    let x = Math.floor((Math.random() * domande.length));
+    let uno1 = document.createElement('p'); //  qui: aggiungili uno alla volta ad ESERCIZI!
+    uno1.textContent = domande[x];
+    esercizi.appendChild(uno1);
+    verbi.push(domande[x]);
+    domande.splice(x, 1);
 }
-const esercizi = document.querySelector('.esercizi');
-let domande = ["verbo1", " verbo2", " verbo3", " verbo4", " verbo5", " verbo6", " verbo7", " verbo8", " verbo9", " verbo10", " verbo11", " verbo12", " verbo13", " verbo14", " verbo15", " verbo16" ];
-let pDomande = document.createElement('p');
-pDomande.textContent = domande;
+function global() {
+    for (let q = 16; q > 0; q--) {
+        if (q > 0) {
+            randomize();
+            scrivi = document.createElement('input');
+            scrivi.classList.add('input');
+            inserisci.appendChild(scrivi);
+        }
+    }
 
-let primo = domande[0];
-let pPrimo = document.createElement('p');
-pPrimo.textContent = primo;
-let scrivi1 = document.createElement('input');
-scrivi1.classList.add('input');
-esercizi.appendChild(pPrimo);
-pPrimo.appendChild(scrivi1);
+    let controlla = document.querySelector('button');
+    controlla.onclick = () => {
+        let risposte = [];
+        let rispostaData = document.querySelectorAll('input');
+        risposte.push(rispostaData[0].value);
+        risposte.push(rispostaData[1].value);
+        risposte.push(rispostaData[2].value);
+        risposte.push(rispostaData[3].value);
+        risposte.push(rispostaData[4].value);
+        risposte.push(rispostaData[5].value);
+        risposte.push(rispostaData[6].value);
+        risposte.push(rispostaData[7].value);
+        risposte.push(rispostaData[8].value);
+        risposte.push(rispostaData[9].value);
+        risposte.push(rispostaData[10].value);
+        risposte.push(rispostaData[11].value);
+        risposte.push(rispostaData[12].value);
+        risposte.push(rispostaData[13].value);
+        risposte.push(rispostaData[14].value);
+        risposte.push(rispostaData[15].value);
+        function controlla() {
+            let v1 = verbi.indexOf("είμαι");
+            let v2 = verbi.indexOf("έχω");
+            let v3 = verbi.indexOf("αγαπώ");
+            let v4 = verbi.indexOf("μπορώ");
+            let v5 = verbi.indexOf("θέλω");
+            let v6 = verbi.indexOf("ξέρω");
+            let v7 = verbi.indexOf("ακούω");
+            let v8 = verbi.indexOf("λέω");
+            let v9 = verbi.indexOf("τρώω");
+            let v10 = verbi.indexOf("κλαίω");
+            let v11 = verbi.indexOf("καίω");
+            let v12 = verbi.indexOf("ζω");
+            let v13 = verbi.indexOf("υπάρχω");
+            let v14 = verbi.indexOf("φταίω");
+            let v15 = verbi.indexOf("διαβάζω");
+            let v16 = verbi.indexOf("γράφω");
 
-let due = domande[1];
-let pDue = document.createElement('p');
-pDue.textContent = due;
-let scrivi2 = document.createElement('input');
-scrivi2.classList.add('input');
-esercizi.appendChild(pDue);
-pDue.appendChild(scrivi2);
-
-let tre = domande[2];
-let pTre = document.createElement('p');
-pTre.textContent = tre;
-let scrivi3 = document.createElement('input');
-scrivi3.classList.add('input');
-esercizi.appendChild(pTre);
-pTre.appendChild(scrivi3);
-
-let quattro = domande[3];
-let pQuattro = document.createElement('p');
-pQuattro.textContent = quattro;
-let scrivi4 = document.createElement('input');
-scrivi4.classList.add('input');
-esercizi.appendChild(pQuattro);
-pQuattro.appendChild(scrivi4);
-
-let cinque = domande[4];
-let pCinque = document.createElement('p');
-pCinque.textContent = cinque;
-let scrivi5 = document.createElement('input');
-scrivi5.classList.add('input');
-esercizi.appendChild(pCinque);
-pCinque.appendChild(scrivi5);
-
-let sei = domande[5];
-let pSei = document.createElement('p');
-pSei.textContent = sei;
-let scrivi6 = document.createElement('input');
-scrivi6.classList.add('input');
-esercizi.appendChild(pSei);
-pSei.appendChild(scrivi6);
-
-let sette = domande[6];
-let pSette = document.createElement('p');
-pSette.textContent = sette;
-let scrivi7 = document.createElement('input');
-scrivi7.classList.add('input');
-esercizi.appendChild(pSette);
-pSette.appendChild(scrivi7);
-
-let otto = domande[7];
-let pOtto = document.createElement('p');
-pOtto.textContent = otto;
-let scrivi8 = document.createElement('input');
-scrivi8.classList.add('input');
-esercizi.appendChild(pOtto);
-pOtto.appendChild(scrivi8);
-
-let nove = domande[8];
-let pNove = document.createElement('p');
-pNove.textContent = nove;
-let scrivi9 = document.createElement('input');
-scrivi9.classList.add('input');
-esercizi.appendChild(pNove);
-pNove.appendChild(scrivi9);
-
-let dieci = domande[9];
-let pDieci = document.createElement('p');
-pDieci.textContent = dieci;
-let scrivi10 = document.createElement('input');
-scrivi10.classList.add('input');
-esercizi.appendChild(pDieci);
-pDieci.appendChild(scrivi10);
-
-let undici = domande[10];
-let pUndici = document.createElement('p');
-pUndici.textContent = undici;
-let scrivi11 = document.createElement('input');
-scrivi11.classList.add('input');
-esercizi.appendChild(pUndici);
-pUndici.appendChild(scrivi11);
-
-let dodici = domande[11];
-let pDodici = document.createElement('p');
-pDodici.textContent = dodici;
-let scrivi12 = document.createElement('input');
-scrivi12.classList.add('input');
-esercizi.appendChild(pDodici);
-pDodici.appendChild(scrivi12);
-
-let tredici = domande[12];
-let pTredici = document.createElement('p');
-pTredici.textContent = tredici;
-let scrivi13 = document.createElement('input');
-scrivi13.classList.add('input');
-esercizi.appendChild(pTredici);
-pTredici.appendChild(scrivi13);
-
-let quattordici = domande[13];
-let pQuattordici = document.createElement('p');
-pQuattordici.textContent = quattordici;
-let scrivi14 = document.createElement('input');
-scrivi14.classList.add('input');
-esercizi.appendChild(pQuattordici);
-pQuattordici.appendChild(scrivi14);
-
-let quindici = domande[14];
-let pQuindici = document.createElement('p');
-pQuindici.textContent = quindici;
-let scrivi15 = document.createElement('input');
-scrivi15.classList.add('input');
-esercizi.appendChild(pQuindici);
-pQuindici.appendChild(scrivi15);
-
-let sedici = domande[15];
-let pSedici = document.createElement('p');
-pSedici.textContent = sedici;
-let scrivi16 = document.createElement('input');
-scrivi16.classList.add('input');
-esercizi.appendChild(pSedici);
-pSedici.appendChild(scrivi16);
-
-//PRIMA DI AGGIUNGERE I VERBI VERI: VEDI SE, TOGLIENDO 'appendChild' CHE C'E' ORA, RIESCI A RANDOMIZZARLI!
+            if (risposte.includes("ήμουν") == true) {
+                let r1 = risposte.indexOf("ήμουν");
+                if (v1 == r1) {
+                    let giusto = document.querySelector('input');
+                    giusto.style.backgroundColor = "green"; // COSÌ PERÒ, NATURALMENTE, "ILLUMINA" IL PRIMO...
+                }
+            }
+            if (risposte.includes("είχα") == true) {
+                let r2 = risposte.indexOf("είχα");
+                if (v2 == r2) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("αγαπούσα") == true) {
+                let r3 = risposte.indexOf("αγαπούσα");
+                if (v3 == r3) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("μπορούσα") == true) {
+                let r4 = risposte.indexOf("μπορούσα");
+                if (v4 == r4) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("ήθελα") == true) {
+                let r5 = risposte.indexOf("ήθελα");
+                if (v5 == r5) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("ήξερα") == true) {
+                let r6 = risposte.indexOf("ήξερα");
+                if (v6 == r6) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("άκουγα") == true) {
+                let r7 = risposte.indexOf("άκουγα");
+                if (v7 == r7) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("έλεγα") == true) {
+                let r8 = risposte.indexOf("έλεγα");
+                if (v8 == r8) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("έτρωγα") == true) {
+                let r9 = risposte.indexOf("έτρωγα");
+                if (v9 == r9) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("έκλαιγα") == true) {
+                let r10 = risposte.indexOf("έκλαιγα");
+                if (v10 == r10) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("έκαιγα") == true) {
+                let r11 = risposte.indexOf("έκαιγα");
+                if (v11 == r11) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("ζούσα") == true) {
+                let r12 = risposte.indexOf("ζούσα");
+                if (v12 == r12) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("υπήρχα") == true) {
+                let r13 = risposte.indexOf("υπήρχα");
+                if (v13 == r13) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("έφταιγα") == true) {
+                let r14 = risposte.indexOf("έφταιγα");
+                if (v14 == r14) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("διάβαζα") == true) {
+                let r15 = risposte.indexOf("διάβαζα");
+                if (v15 == r15) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+            if (risposte.includes("έγραφα") == true) {
+                let r16 = risposte.indexOf("έγραφα");
+                if (v16 == r16) {
+                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                }
+            }
+        }
+        controlla();
+    }
+}
+global();
