@@ -1,3 +1,8 @@
+const header = document.querySelector('header');
+header.onclick = () => {
+    window.open("../../index.html", "_self");
+}
+
 let esercizi = document.querySelector('.esercizi');
 let inserisci = document.querySelector('.inserisci');
 let scrivi;
@@ -6,7 +11,7 @@ let verbi = [];
 let domande = ["είμαι", "έχω", "αγαπώ", "μπορώ", "θέλω", "ξέρω", "ακούω", "λέω", "τρώω", "κλαίω", "καίω", "ζω", "υπάρχω", "φταίω", "διαβάζω", "γράφω"];
 function randomize() {
     let x = Math.floor((Math.random() * domande.length));
-    let uno1 = document.createElement('p'); //  qui: aggiungili uno alla volta ad ESERCIZI!
+    let uno1 = document.createElement('p');
     uno1.textContent = domande[x];
     esercizi.appendChild(uno1);
     verbi.push(domande[x]);
@@ -26,22 +31,22 @@ function global() {
     controlla.onclick = () => {
         let risposte = [];
         let rispostaData = document.querySelectorAll('input');
-        risposte.push(rispostaData[0].value);
-        risposte.push(rispostaData[1].value);
-        risposte.push(rispostaData[2].value);
-        risposte.push(rispostaData[3].value);
-        risposte.push(rispostaData[4].value);
-        risposte.push(rispostaData[5].value);
-        risposte.push(rispostaData[6].value);
-        risposte.push(rispostaData[7].value);
-        risposte.push(rispostaData[8].value);
-        risposte.push(rispostaData[9].value);
-        risposte.push(rispostaData[10].value);
-        risposte.push(rispostaData[11].value);
-        risposte.push(rispostaData[12].value);
-        risposte.push(rispostaData[13].value);
-        risposte.push(rispostaData[14].value);
-        risposte.push(rispostaData[15].value);
+        risposte.push(rispostaData[0].value.toUpperCase());
+        risposte.push(rispostaData[1].value.toUpperCase());
+        risposte.push(rispostaData[2].value.toUpperCase());
+        risposte.push(rispostaData[3].value.toUpperCase());
+        risposte.push(rispostaData[4].value.toUpperCase());
+        risposte.push(rispostaData[5].value.toUpperCase());
+        risposte.push(rispostaData[6].value.toUpperCase());
+        risposte.push(rispostaData[7].value.toUpperCase());
+        risposte.push(rispostaData[8].value.toUpperCase());
+        risposte.push(rispostaData[9].value.toUpperCase());
+        risposte.push(rispostaData[10].value.toUpperCase());
+        risposte.push(rispostaData[11].value.toUpperCase());
+        risposte.push(rispostaData[12].value.toUpperCase());
+        risposte.push(rispostaData[13].value.toUpperCase());
+        risposte.push(rispostaData[14].value.toUpperCase());
+        risposte.push(rispostaData[15].value.toUpperCase());
         function controlla() {
             let v1 = verbi.indexOf("είμαι");
             let v2 = verbi.indexOf("έχω");
@@ -60,105 +65,152 @@ function global() {
             let v15 = verbi.indexOf("διαβάζω");
             let v16 = verbi.indexOf("γράφω");
 
-            if (risposte.includes("ήμουν") == true) {
-                let r1 = risposte.indexOf("ήμουν");
+            if (risposte.includes("Ήμουν".toUpperCase()) == true) {
+                let r1 = risposte.indexOf("Ήμουν".toUpperCase());
                 if (v1 == r1) {
-                    let giusto = document.querySelector('input');
-                    giusto.style.backgroundColor = "green"; // COSÌ PERÒ, NATURALMENTE, "ILLUMINA" IL PRIMO...
+                    rispostaData[r1].style.backgroundColor = "#46EB1F";
                 }
             }
-            if (risposte.includes("είχα") == true) {
-                let r2 = risposte.indexOf("είχα");
+            else if (risposte.includes("Ήμουν".toUpperCase()) == false) {
+                rispostaData[v1].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("είχα".toUpperCase()) == true) {
+                let r2 = risposte.indexOf("είχα".toUpperCase());
                 if (v2 == r2) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
+                    rispostaData[r2].style.backgroundColor = "#46EB1F";
                 }
             }
-            if (risposte.includes("αγαπούσα") == true) {
-                let r3 = risposte.indexOf("αγαπούσα");
+            else if (risposte.includes("είχα".toUpperCase()) == false) {
+                rispostaData[v2].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("αγαπούσα".toUpperCase()) == true) {
+                let r3 = risposte.indexOf("αγαπούσα".toUpperCase());
                 if (v3 == r3) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r3].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("μπορούσα") == true) {
-                let r4 = risposte.indexOf("μπορούσα");
+            else if (risposte.includes("αγαπούσα".toUpperCase()) == false) {
+                rispostaData[v3].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("μπορούσα".toUpperCase()) == true) {
+                let r4 = risposte.indexOf("μπορούσα".toUpperCase());
                 if (v4 == r4) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r4].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("ήθελα") == true) {
-                let r5 = risposte.indexOf("ήθελα");
+            else if (risposte.includes("μπορούσα".toUpperCase()) == false) {
+                rispostaData[v4].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("ήθελα".toUpperCase()) == true) {
+                let r5 = risposte.indexOf("ήθελα".toUpperCase());
                 if (v5 == r5) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r5].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("ήξερα") == true) {
-                let r6 = risposte.indexOf("ήξερα");
+            else if (risposte.includes("ήθελα".toUpperCase()) == false) {
+                rispostaData[v5].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("ήξερα".toUpperCase()) == true) {
+                let r6 = risposte.indexOf("ήξερα".toUpperCase());
                 if (v6 == r6) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r6].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("άκουγα") == true) {
-                let r7 = risposte.indexOf("άκουγα");
+            else if (risposte.includes("ήξερα".toUpperCase()) == false) {
+                rispostaData[v6].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("άκουγα".toUpperCase()) == true) {
+                let r7 = risposte.indexOf("άκουγα".toUpperCase());
                 if (v7 == r7) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r7].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("έλεγα") == true) {
-                let r8 = risposte.indexOf("έλεγα");
+            else if (risposte.includes("άκουγα".toUpperCase()) == false) {
+                rispostaData[v7].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("έλεγα".toUpperCase()) == true) {
+                let r8 = risposte.indexOf("έλεγα".toUpperCase());
                 if (v8 == r8) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r8].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("έτρωγα") == true) {
-                let r9 = risposte.indexOf("έτρωγα");
+            else if (risposte.includes("έλεγα".toUpperCase()) == false) {
+                rispostaData[v8].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("έτρωγα".toUpperCase()) == true) {
+                let r9 = risposte.indexOf("έτρωγα".toUpperCase());
                 if (v9 == r9) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r9].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("έκλαιγα") == true) {
-                let r10 = risposte.indexOf("έκλαιγα");
+            else if (risposte.includes("έτρωγα".toUpperCase()) == false) {
+                rispostaData[v9].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("έκλαιγα".toUpperCase()) == true) {
+                let r10 = risposte.indexOf("έκλαιγα".toUpperCase());
                 if (v10 == r10) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r10].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("έκαιγα") == true) {
-                let r11 = risposte.indexOf("έκαιγα");
+            else if (risposte.includes("έκλαιγα".toUpperCase()) == false) {
+                rispostaData[v10].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("έκαιγα".toUpperCase()) == true) {
+                let r11 = risposte.indexOf("έκαιγα".toUpperCase());
                 if (v11 == r11) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r11].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("ζούσα") == true) {
-                let r12 = risposte.indexOf("ζούσα");
+            else if (risposte.includes("έκαιγα".toUpperCase()) == false) {
+                rispostaData[v11].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("ζούσα".toUpperCase()) == true) {
+                let r12 = risposte.indexOf("ζούσα".toUpperCase());
                 if (v12 == r12) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r12].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("υπήρχα") == true) {
-                let r13 = risposte.indexOf("υπήρχα");
+            else if (risposte.includes("ζούσα".toUpperCase()) == false) {
+                rispostaData[v12].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("υπήρχα".toUpperCase()) == true) {
+                let r13 = risposte.indexOf("υπήρχα".toUpperCase());
                 if (v13 == r13) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r13].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("έφταιγα") == true) {
-                let r14 = risposte.indexOf("έφταιγα");
+            else if (risposte.includes("υπήρχα".toUpperCase()) == false) {
+                rispostaData[v13].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("έφταιγα".toUpperCase()) == true) {
+                let r14 = risposte.indexOf("έφταιγα".toUpperCase());
                 if (v14 == r14) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r14].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("διάβαζα") == true) {
-                let r15 = risposte.indexOf("διάβαζα");
+            else if (risposte.includes("έφταιγα".toUpperCase()) == false) {
+                rispostaData[v14].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("διάβαζα".toUpperCase()) == true) {
+                let r15 = risposte.indexOf("διάβαζα".toUpperCase());
                 if (v15 == r15) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r15].style.backgroundColor = "#46EB1F";
+                                }
             }
-            if (risposte.includes("έγραφα") == true) {
-                let r16 = risposte.indexOf("έγραφα");
+            else if (risposte.includes("διάβαζα".toUpperCase()) == false) {
+                rispostaData[v15].style.backgroundColor = "#D11212";
+            }
+            if (risposte.includes("έγραφα".toUpperCase()) == true) {
+                let r16 = risposte.indexOf("έγραφα".toUpperCase());
                 if (v16 == r16) {
-                    alert("Giusto! Ora però devi fare tutta la roba che esce il colore verde, ecc.")
-                }
+                    rispostaData[r16].style.backgroundColor = "#46EB1F";
+                                }
+            }
+            else if (risposte.includes("έγραφα".toUpperCase()) == false) {
+                rispostaData[v16].style.backgroundColor = "#D11212";
             }
         }
         controlla();
-    }
+            }
 }
 global();
