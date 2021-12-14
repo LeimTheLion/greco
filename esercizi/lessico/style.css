@@ -15,9 +15,61 @@ header {
     display: flex;
     align-items: center;
     color: rgb(8, 17, 66);
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 header:hover {
     cursor: pointer;
+}
+
+div {
+    color: white;
+    margin-left: 30px;
+}
+
+.colonna {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.esercizi {
+    display: flex;
+    flex-direction: column;
+}
+
+.inserisci {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+}
+
+.select {
+    width: 400px;
+}
+
+button {
+    position: sticky;
+    left: 1700px;
+    bottom: 580px;
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(27, 146, 27);
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(5, 100, 5);
+}
+
+button:active {
+    background-color: rgb(245, 201, 3);
+}
+
+.voti {
+    font-weight: 700;
 }
