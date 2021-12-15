@@ -119,23 +119,23 @@ function global() {
     risposta1(r3, r3a);
     risposta2(r3, r3a);
     risposta3(r3, r3a);
-    let r4 = ["ο παραλήπτης", "το επιτόκιο", "ο αφέντης"]
+    let r4 = ["ο παραλήπτης", "το επιτόκιο", "ο αφέντης"];
     risposta1(r4, r4a);
     risposta2(r4, r4a);
     risposta3(r4, r4a);
-    let r5 = ["ο φάκελος", "το φακελάκι", "η απόδειξη"]
+    let r5 = ["ο φάκελος", "το φακελάκι", "η απόδειξη"];
     risposta1(r5, r5a);
     risposta2(r5, r5a);
     risposta3(r5, r5a);
-    let r6 = ["η απεργία", "η ανάληψη", "η κατάθεση"]
+    let r6 = ["η απεργία", "η ανάληψη", "η κατάθεση"];
     risposta1(r6, r6a);
     risposta2(r6, r6a);
     risposta3(r6, r6a);
-    let r7 = ["το διαβατήριο", "ο λογαριασμός", "το βιβλιάριο"]
+    let r7 = ["το διαβατήριο", "ο λογαριασμός", "το βιβλιάριο"];
     risposta1(r7, r7a);
     risposta2(r7, r7a);
     risposta3(r7, r7a);
-    let r8 = ["ο λογαριασμός", "ο υπάλληλος ", "το ειδοποιητήριο"]
+    let r8 = ["ο λογαριασμός", "ο υπάλληλος ", "το ειδοποιητήριο"];
     risposta1(r8, r8a);
     risposta2(r8, r8a);
     risposta3(r8, r8a);
@@ -171,6 +171,107 @@ function global() {
     risposta1(r16, r16a);
     risposta2(r16, r16a);
     risposta3(r16, r16a);
-}
 
+    let controlla = document.querySelector('button');
+    controlla.onclick = () => {
+        let g = 0;
+        if (r1a.value == "το πιστοποιητικό") {
+            g++;
+            r1a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r1a.style.backgroundColor = "#D11212";
+        if (r2a.value == "ο ταχυδρόμος") {
+            g++;
+            r2a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r2a.style.backgroundColor = "#D11212";
+        if (r3a.value == "ο αποστολέας") {
+            g++;
+            r3a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r3a.style.backgroundColor = "#D11212";
+        if (r4a.value == "ο παραλήπτης") {
+            g++;
+            r4a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r4a.style.backgroundColor = "#D11212";
+        if (r5a.value == "ο φάκελος") {
+            g++;
+            r5a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r5a.style.backgroundColor = "#D11212";
+        if (r6a.value == "η απεργία") {
+            g++;
+            r6a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r6a.style.backgroundColor = "#D11212";
+        if (r7a.value == "το διαβατήριο") {
+            g++;
+            r7a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r7a.style.backgroundColor = "#D11212";
+        if (r8a.value == "ο λογαριασμός") {
+            g++;
+            r8a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r8a.style.backgroundColor = "#D11212";
+        if (r9a.value == "la carta di credito") {
+            g++;
+            r9a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r9a.style.backgroundColor = "#D11212";
+        if (r10a.value == "la tassa") {
+            g++;
+            r10a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r10a.style.backgroundColor = "#D11212";
+        if (r11a.value == "la marca da bollo") {
+            g++;
+            r11a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r11a.style.backgroundColor = "#D11212";
+        if (r12a.value == "i documenti") {
+            g++;
+            r12a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r12a.style.backgroundColor = "#D11212";
+        if (r13a.value == "la carta prepagata") {
+            g++;
+            r13a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r13a.style.backgroundColor = "#D11212";
+        if (r14a.value == "il cambio") {
+            g++;
+            r14a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r14a.style.backgroundColor = "#D11212";
+        if (r15a.value == "il francobollo") {
+            g++;
+            r15a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r15a.style.backgroundColor = "#D11212";
+        if (r16a.value == "la buca delle lettere") {
+            g++;
+            r16a.style.backgroundColor = "#46EB1F";
+        }
+        else
+            r16a.style.backgroundColor = "#D11212";
+        voti.textContent = "Risposte corrette: " + g + " / 16";
+    }
+}
 global()
