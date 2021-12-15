@@ -1,6 +1,6 @@
 const header = document.querySelector('header');
 header.onclick = () => {
-    window.open("../../index.html", "_self");
+    window.open("https://leimthelion.github.io/greco/", "_self");
 }
 let esercizi = document.querySelector('.esercizi');
 let inserisci = document.querySelector('.inserisci');
