@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #004f82;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-image: url("../../inizia2.jpg");
+    height: 200px;
+    border-bottom: 2px solid white;
+    font-size: 80px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: rgb(8, 17, 66);
+    margin-bottom: 50px;
+}
+
+header:hover {
+    cursor: pointer;
+}
+
+div {
+    color: white;
+    margin-left: 30px;
+}
+
+.colonna {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    justify-content: space-evenly;
+}
+
+.esercizi {
+    display: grid;
+}
+
+.inserisci {
+    display: grid;
+}
+
+.input {
+    margin-top: 10px;
+    width: 400px;
+    height: 50px;
+}
+
+button {
+    position: sticky;
+    left: 1700px;
+    bottom: 580px;
+    width: 200px;
+    height: 100px;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(27, 146, 27);
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(5, 100, 5);
+}
+
+button:active {
+    background-color: rgb(245, 201, 3);
+}
+
+.voti {
+    font-weight: 700;
+}

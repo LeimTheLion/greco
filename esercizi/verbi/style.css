@@ -15,7 +15,7 @@ header {
     display: flex;
     align-items: center;
     color: rgb(8, 17, 66);
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 }
 
 header:hover {
@@ -23,52 +23,33 @@ header:hover {
 }
 
 div {
-    color: white;
-    margin-left: 30px;
-}
-
-.colonna {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 500px 500px;
-    justify-content: space-evenly;
-}
-
-.esercizi {
-    display: grid;
-}
-
-.inserisci {
-    display: grid;
-}
-
-.input {
-    margin-top: 10px;
-    width: 400px;
-    height: 50px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    color: aliceblue;
+    margin-bottom: 70px;
 }
 
 button {
-    position: sticky;
-    left: 1700px;
-    bottom: 580px;
-    width: 200px;
-    height: 100px;
+    background-color: rgb(8, 17, 66);
     color: white;
     font-weight: 700;
-    background-color: rgb(27, 146, 27);
-    border: 2px solid green;
-    border-radius: 5px;
+    height: 70px;
+    width: 150px;
+    border-radius: 10px;
+    border: 2px solid white;
 }
 
 button:hover {
-    background-color: rgb(5, 100, 5);
+    background-color:rgb(46, 81, 187);
 }
 
 button:active {
     background-color: rgb(245, 201, 3);
 }
 
-.voti {
-    font-weight: 700;
+.choice {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
 }
